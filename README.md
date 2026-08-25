@@ -1,10 +1,12 @@
 # Fashion E-commerce Platform
 
-A modern, scalable fashion e-commerce foundation built with Next.js, React, TypeScript, and Tailwind CSS.
+A modern fashion e-commerce frontend foundation built with Next.js, React, TypeScript, and Tailwind CSS.
 
-## Project goal
+## Current stage
 
-This repository is the foundation for a large-scale fashion e-commerce platform that will be developed incrementally. Stage 1 intentionally contains only the application scaffold, shared project structure, and a minimal landing page used to verify that the stack is working.
+The repository is currently a Stage 1 storefront foundation. It contains a structured homepage, reusable UI components, navigation anchors, merchandising sections, promotional banners, and static product/category data.
+
+The current stage does **not** include database-backed catalog management, authentication, persistent wishlist/cart state, checkout, payment, shipping, order management, or admin functionality. Those are intentionally deferred to later implementation stages.
 
 ## Design reference
 
@@ -14,7 +16,7 @@ ZALORA is reference material only. This project does not copy ZALORA source code
 
 ## Technology
 
-- Next.js with the App Router
+- Next.js App Router
 - React
 - TypeScript
 - Tailwind CSS
@@ -65,33 +67,35 @@ npx tsc --noEmit
 
 ```text
 .
-├── public/                 # Static public assets
 ├── src/
 │   ├── app/                # Next.js App Router entry points
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/         # Reusable UI components
-│   │   ├── layout/          # Site-level layout components
-│   │   └── ui/              # Generic UI primitives
-│   ├── features/            # Domain-oriented feature modules
-│   ├── lib/                 # Shared utilities and infrastructure helpers
-│   ├── services/             # External/business service boundaries
-│   ├── types/                # Shared TypeScript types
-│   └── config/               # Centralized application configuration
+│   │   ├── home/
+│   │   ├── layout/
+│   │   ├── navigation/
+│   │   ├── product/
+│   │   └── ui/
+│   ├── data/               # Static homepage/catalog seed data
+│   └── types/              # Shared TypeScript types
 ├── .gitignore
 ├── eslint.config.mjs
 ├── next-env.d.ts
 ├── next.config.ts
-├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
 ├── tsconfig.json
 └── README.md
 ```
 
-The domain folders are intentionally lightweight at this stage. No database, authentication, catalog, cart, checkout, payment, shipping, ordering, or admin functionality is included yet.
+## Current implementation notes
+
+The homepage provides working in-page navigation targets for the current Stage 1 sections. Call-to-action controls point to the storefront catalog section, and product section links point to their corresponding homepage sections.
+
+Search, wishlist, shopping bag, account, and dedicated product/catalog pages remain intentionally unimplemented until their respective application stages are introduced.
 
 ## Development principles
 
-The project will evolve in stages. New domain functionality should remain modular and should be introduced behind clear boundaries so that the application can scale without coupling unrelated concerns.
+The project will evolve incrementally. New domain functionality should remain modular and should be introduced behind clear boundaries so that the application can scale without coupling unrelated concerns.
