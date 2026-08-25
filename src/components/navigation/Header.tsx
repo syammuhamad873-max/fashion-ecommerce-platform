@@ -28,9 +28,9 @@ export function Header() {
             <input aria-label="Search" placeholder="Search fashion, brands..." className="w-full bg-transparent text-sm outline-none placeholder:text-neutral-400" />
           </label>
           <button type="button" aria-label="Search" className="inline-flex size-10 items-center justify-center rounded-full hover:bg-neutral-100 md:hidden"><Icon name="search" className="size-5" /></button>
-          <button type="button" aria-label="Wishlist" className="inline-flex size-10 items-center justify-center rounded-full hover:bg-neutral-100"><Icon name="heart" className="size-5" /></button>
-          <button type="button" aria-label="Shopping bag" className="inline-flex size-10 items-center justify-center rounded-full hover:bg-neutral-100"><Icon name="bag" className="size-5" /></button>
-          <button type="button" aria-label="Account" className="hidden size-10 items-center justify-center rounded-full hover:bg-neutral-100 sm:inline-flex"><Icon name="user" className="size-5" /></button>
+          <a href="#wishlist" aria-label="Wishlist" className="inline-flex size-10 items-center justify-center rounded-full hover:bg-neutral-100"><Icon name="heart" className="size-5" /></a>
+          <a href="#cart" aria-label="Shopping bag" className="inline-flex size-10 items-center justify-center rounded-full hover:bg-neutral-100"><Icon name="bag" className="size-5" /></a>
+          <a href="#account" aria-label="Account" className="hidden size-10 items-center justify-center rounded-full hover:bg-neutral-100 sm:inline-flex"><Icon name="user" className="size-5" /></a>
         </div>
       </div>
 
