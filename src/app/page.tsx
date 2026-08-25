@@ -58,7 +58,7 @@ export default function HomePage() {
         </section>
 
         <section id="beauty" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-18">
-          <ProductSection eyebrow="WHAT'S MOVING" title="Trending Now" products={trendingNow} />
+          <ProductSection eyebrow="WHAT&apos;S MOVING" title="Trending Now" products={trendingNow} />
         </section>
 
         <section id="brands" className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8 lg:pb-18">
