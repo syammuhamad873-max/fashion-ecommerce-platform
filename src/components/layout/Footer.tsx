@@ -5,6 +5,25 @@ const footerGroups = [
   { title: "Information", links: ["Payment methods", "Delivery info", "Terms", "Privacy"] },
 ];
 
+const footerTargets: Record<string, string> = {
+  "Contact us": "#account",
+  Shipping: "#catalog",
+  Returns: "#catalog",
+  "Size guide": "#catalog",
+  "Our story": "#brands",
+  Careers: "#brands",
+  Journal: "#brands",
+  Sustainability: "#brands",
+  FAQ: "#account",
+  "Order help": "#account",
+  "Store locator": "#catalog",
+  Accessibility: "#top",
+  "Payment methods": "#catalog",
+  "Delivery info": "#catalog",
+  Terms: "#top",
+  Privacy: "#top",
+};
+
 export function Footer() {
   return (
     <footer className="mt-16 bg-neutral-950 text-white">
@@ -22,7 +41,7 @@ export function Footer() {
               <div key={group.title}>
                 <h2 className="text-sm font-semibold">{group.title}</h2>
                 <ul className="mt-4 space-y-3 text-sm text-white/55">
-                  {group.links.map((link) => <li key={link}><a href="#top" className="hover:text-white">{link}</a></li>)}
+                  {group.links.map((link) => <li key={link}><a href={footerTargets[link]} className="hover:text-white">{link}</a></li>)}
                 </ul>
               </div>
             ))}
