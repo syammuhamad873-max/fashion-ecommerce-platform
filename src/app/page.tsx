@@ -43,7 +43,7 @@ export default function HomePage() {
           <CategoryGrid categories={categories} />
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="catalog" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-5 lg:grid-cols-2">
             {promotions.map((promotion) => <PromotionBanner key={promotion.id} promotion={promotion} />)}
           </div>
@@ -75,6 +75,26 @@ export default function HomePage() {
 
         <section id="kids" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-20">
           <ProductSection eyebrow="COMMUNITY FAVORITES" title="Best Sellers" products={bestSellers} />
+        </section>
+
+        <section id="accessories" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+          <div className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-8 sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">ACCESSORIES</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight">Finishing touches, coming next.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">The navigation target is now valid while the dedicated accessories catalog remains part of a later storefront stage.</p>
+          </div>
+        </section>
+
+        <section id="wishlist" className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+          <div className="sr-only" aria-label="Wishlist placeholder">Wishlist functionality is not implemented in Stage 1.</div>
+        </section>
+
+        <section id="cart" className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+          <div className="sr-only" aria-label="Shopping bag placeholder">Shopping bag functionality is not implemented in Stage 1.</div>
+        </section>
+
+        <section id="account" className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+          <div className="sr-only" aria-label="Account placeholder">Account functionality is not implemented in Stage 1.</div>
         </section>
       </main>
       <Footer />
